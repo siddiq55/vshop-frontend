@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './css/LoginSignup.css'
-import { BASE_URL } from '../api.js'
+import { BASE_URL } from '../../api.js'
 
 
 
