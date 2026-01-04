@@ -1,5 +1,5 @@
 import React, { useState, createContext, useEffect } from "react";
-import { BASE_URL } from "../../api.js";
+import { BASE_URL } from "../..api.js";
 
 export const ShopContext = createContext("");
 

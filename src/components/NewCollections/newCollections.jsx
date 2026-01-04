@@ -3,7 +3,7 @@ import { useState } from 'react'
 import './newCollections.css'
 import {Item} from '../Item/item.jsx'
 import { useEffect } from 'react'
-import { BASE_URL } from '../../api.js'
+import { BASE_URL } from '../../../api.js'
 
 export const NewCollections = () => {
 

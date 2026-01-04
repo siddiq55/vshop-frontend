@@ -2,7 +2,7 @@ import React from 'react'
 import { useEffect, useState } from 'react'
 import './popular.css'
 import {Item} from '../Item/item.jsx'
-import { BASE_URL } from '../../api.js'
+import { BASE_URL } from '../../../api.js'
 
 
 export const Popular = () => {
