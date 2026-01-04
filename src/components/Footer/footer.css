@@ -1,0 +1,171 @@
+.footer {
+  background: white;
+  padding: 80px 0 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 45px;
+  border-top: 1px solid #e5e5e5;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-logo img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.footer-logo p {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ff4141;
+  margin: 0;
+  letter-spacing: 2px;
+}
+
+.footer-links {
+  display: flex;
+  list-style: none;
+  gap: 50px;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-links li {
+  font-size: 1.1rem;
+  color: #444;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  position: relative;
+}
+
+.footer-links li::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  
+}
+
+.footer-links li:hover {
+  color: #ff6b6b;
+}
+
+.footer-links li:hover::after {
+  width: 100%;
+}
+
+.footer-social-icons {
+  display: flex;
+  gap: 25px;
+}
+
+.footer-social-icon-container {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8f8f8;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.footer-social-icon-container:hover {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(255, 107, 107, 0.3);
+  border-color: #ff6b6b;
+}
+
+
+
+
+
+/* Tablet Responsiveness (Max-width: 1280px) */
+@media(max-width: 1280px) {
+  .footer {
+    padding: 60px 20px 20px;
+    gap: 35px;
+  }
+  
+  .footer-logo img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .footer-logo p {
+    font-size: 2rem;
+  }
+
+  .footer-links {
+    gap: 35px;
+  }
+
+  .footer-links li {
+    font-size: 1rem;
+  }
+
+  .footer-social-icons {
+    gap: 20px;
+  }
+
+  .footer-social-icon-container {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+/* Mobile Responsiveness (Max-width: 800px) */
+@media(max-width: 800px) {
+  .footer {
+    padding: 40px 10px 15px;
+    gap: 30px;
+  }
+  
+  .footer-logo {
+    gap: 15px;
+  }
+
+  .footer-logo img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .footer-logo p {
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+  }
+
+  .footer-links {
+    /* Stack links vertically on small screens */
+    flex-direction: column; 
+    gap: 15px;
+    text-align: center;
+    width: 100%;
+    align-items: center;
+  }
+
+  .footer-links li {
+    font-size: 0.9rem;
+  }
+
+  .footer-social-icons {
+    gap: 15px;
+  }
+
+  .footer-social-icon-container {
+    width: 38px;
+    height: 38px;
+  }
+}
