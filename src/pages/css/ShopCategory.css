@@ -138,39 +138,76 @@
 
 @media (max-width: 480px) {
   .shop-category {
-    margin: 20px auto;
+    margin: 10px auto;
     padding: 0 10px;
   }
 
   .shop-category > img {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+    width: 100%; /* Ensures banner stays responsive */
     border-radius: 8px;
   }
 
   .shopcategory-index-sort {
-    margin: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
     padding: 0 5px;
   }
 
   .shopcategory-index-sort p {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
+    font-weight: 600;
   }
 
   .shopcategory-sort {
-    padding: 8px 15px;
-    font-size: 0.85rem;
-    gap: 8px;
+    padding: 5px 12px;
+    font-size: 0.75rem;
+    border: 1px solid #888;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
   }
 
-  .shopcategory-sort img {
-    width: 12px;
-    height: 12px;
-  }
-
+  /* --- GRID FIX START --- */
   .shopcategory-products {
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 20px;
-    margin-top: 20px;
-    margin-bottom: 40px;
+    display: grid;
+    /* Forces exactly 2 columns */
+    grid-template-columns: 1fr 1fr; 
+    gap: 15px; 
+    margin: 20px 0;
   }
+
+  /* Fix for the individual product cards */
+  .shopcategory-products > div { 
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .shopcategory-products img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  /* Fix for the overlapping text in your photo */
+  .shopcategory-products p {
+    font-size: 0.85rem;
+    line-height: 1.2;
+    margin-top: 8px;
+    /* Limit to 2 lines so it doesn't break the layout */
+    display: -webkit-box;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .shopcategory-products span {
+    font-size: 0.9rem;
+    font-weight: bold;
+  }
+  /* --- GRID FIX END --- */
 }
